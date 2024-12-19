@@ -1,0 +1,25 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+}
+
+#root {
+  height: inherit;
+
+  background-color: var(--clr-neutral-cream);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  flex-basis: 33.75rem;
+
+  font-family: var(--ff-serif);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+}

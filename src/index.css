@@ -1,0 +1,154 @@
+/***
+    The new CSS reset - version 1.11.3 (last updated 25.08.2024)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
+  all: unset;
+  display: revert;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+a,
+button {
+  cursor: revert;
+}
+
+ol,
+ul,
+menu,
+summary {
+  list-style: none;
+}
+
+ol {
+  counter-reset: revert;
+}
+
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+
+textarea {
+  white-space: revert;
+}
+
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+:where(pre) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: unset;
+}
+
+:where([hidden]) {
+  display: none;
+}
+
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+:where(dialog:modal) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+::-webkit-details-marker {
+  display: none;
+}
+
+/***
+    FONT FACES
+***/
+
+@font-face {
+  font-family: "DM Sans";
+  src: local("DM Sans"),
+    url("./assets/DM_Sans/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: local("DM Sans"),
+    url("./assets/DM_Sans/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/***
+    ROOT
+***/
+
+:root {
+  --clr-primary-soft-red: hsl(10, 79%, 65%);
+  --clr-primary-cyan: hsl(186, 34%, 60%);
+  --clr-neutral-dark-brown: hsl(25, 47%, 15%);
+  --clr-neutral-medium-brown: hsl(28, 10%, 53%);
+  --clr-neutral-cream: hsl(27, 66%, 92%);
+  --clr-neutral-very-pale-orange: hsl(33, 100%, 98%);
+
+  --ff-serif: "DM Sans", serif;
+  --fs-mini-caption: 0.75rem;
+  --fs-body: 0.9375rem;
+  --fs-heading-lg: 1.5rem;
+  --fs-heading-xl: 1.875rem;
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  font-size: 16px;
+}
+
+@media (min-width: 33.75rem) {
+  :root {
+    --fs-mini-caption: 0.9375rem;
+    --fs-body: 1.125rem;
+    --fs-heading-lg: 2rem;
+    --fs-heading-xl: 3rem;
+  }
+}
+
+/* .app {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+} */
